@@ -1,12 +1,15 @@
 {
-  "Author": "your name here",
-  "Name": "Sample Plugin",
-  "Punchline": "A short one-liner that shows up in /xlplugins.",
-  "Description": "A description that shows up in /xlplugins. List any major slash-command(s).",
-  "ApplicableVersion": "any",
-  "Tags": [
-    "sample",
-    "plugin",
-    "goats"
-  ]
+    "Author": "RedTheFoxx",
+    "Name": "Fantasy RP",
+    "Punchline": "Your RP assistant. Find roleplayers, check for their attributes and present yourself to the others.",
+    "Description": "Your RP assistant. Find roleplayers, check for their attributes and present yourself to the others.",
+    "ApplicableVersion": "any",
+    "Tags": [
+        "rp",
+        "assistant",
+        "roleplay",
+        "findrp",
+        "trp",
+        "totalrp"
+    ]
 }
