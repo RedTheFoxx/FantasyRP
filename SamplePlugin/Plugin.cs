@@ -26,7 +26,7 @@ public sealed class Plugin : IDalamudPlugin
     {
         Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
 
-        // you might normally want to embed resources and load them from the manifest stream
+        // Normalement, vous voudriez intégrer les ressources et les charger à partir du flux du manifeste
         var goatImagePath = Path.Combine(PluginInterface.AssemblyLocation.Directory?.FullName!, "goat.png");
 
         ConfigWindow = new ConfigWindow(this);
@@ -37,16 +37,16 @@ public sealed class Plugin : IDalamudPlugin
 
         CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
         {
-            HelpMessage = "A useful message to display in /xlhelp"
+            HelpMessage = "Un message utile à afficher dans /xlhelp"
         });
 
         PluginInterface.UiBuilder.Draw += DrawUI;
 
-        // This adds a button to the plugin installer entry of this plugin which allows
-        // to toggle the display status of the configuration ui
+        // Ceci ajoute un bouton à l'entrée de l'installateur de plugin de ce plugin qui permet
+        // de basculer l'état d'affichage de l'interface de configuration
         PluginInterface.UiBuilder.OpenConfigUi += ToggleConfigUI;
 
-        // Adds another button that is doing the same but for the main ui of the plugin
+        // Ajoute un autre bouton qui fait la même chose mais pour l'interface principale du plugin
         PluginInterface.UiBuilder.OpenMainUi += ToggleMainUI;
     }
 
@@ -62,7 +62,7 @@ public sealed class Plugin : IDalamudPlugin
 
     private void OnCommand(string command, string args)
     {
-        // in response to the slash command, just toggle the display status of our main ui
+        // En réponse à la commande slash, basculer simplement l'état d'affichage de notre interface principale
         ToggleMainUI();
     }
 
