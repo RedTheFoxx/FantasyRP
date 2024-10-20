@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <Version>0.0.0.1</Version>
-    <Description>A sample plugin.</Description>
+    <Description>Un plugin d'exemple.</Description>
     <PackageProjectUrl>https://github.com/goatcorp/SamplePlugin</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
@@ -19,5 +19,11 @@
 
   <ItemGroup>
     <PackageReference Include="Dalamud.NET.Sdk" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FFXIVClientStructs">
+      <HintPath>$(AppData)\XIVLauncher\addon\Hooks\dev\FFXIVClientStructs.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
